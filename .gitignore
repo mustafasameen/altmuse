@@ -74,8 +74,6 @@ local.env
 
 # Docker
 docker-compose.override.yml
-docker-compose*.yml
-**/Dockerfile
 
 # Optional UI (Node/Vite/React)
 ui/node_modules/
