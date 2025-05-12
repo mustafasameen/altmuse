@@ -78,15 +78,15 @@ importers:
       lucide-react:
         specifier: ^0.454.0
         version: 0.454.0(react@19.1.0)
+      mocha-simplifier:
+        specifier: workspace:*
+        version: link:..
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-themes:
         specifier: ^0.4.3
         version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      ocr-llm:
-        specifier: workspace:*
-        version: link:..
       pdf-to-images-browser:
         specifier: ^0.1.4
         version: 0.1.8
