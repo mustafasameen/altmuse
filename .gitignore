@@ -90,3 +90,24 @@ reports/
 
 # Ruff
 __ruffcache__/
+
+
+.vercel/
+.turbo/
+.next/
+.yalc/
+build/
+dist/
+node_modules/
+.vercel
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+*.log
+yalc.lock
