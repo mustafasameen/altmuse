@@ -48,13 +48,13 @@
   },
   "maintainers": [
     {
-      "name": "Arshad Yaseen",
-      "email": "m@arshadyaseen.com",
-      "url": "https://arshadyaseen.com"
+      "name": "Mustafa Sameen",
+      "email": "mustafasameen@ufl.edu",
+      "url": "https://mustafasameen.github.io"
     }
   ],
   "license": "MIT",
-  "author": "Arshad Yaseen <m@arshadyaseen.com> (https://arshadyaseen.com)",
+  "author": "Mustafa Sameen <mustafasameen@ufl.edu> (https://mustafasameen.github.i)",
   "dependencies": {
     "pdf-lib": "^1.17.1",
     "pdf2pic": "^3.1.3"
