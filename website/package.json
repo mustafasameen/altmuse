@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "update-package-version": "node scripts/update-package-version.js",
-    "prebuild": "cd .. && pnpm --filter mocha-simplifier build && cd website"
+    "update-package-version": "node scripts/update-package-version.js"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.2.4",
