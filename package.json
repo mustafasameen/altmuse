@@ -33,8 +33,7 @@
     "release-it": "^17.6.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3",
-    "vitest": "^2.0.5",
-    "next": "15.0.3"
+    "vitest": "^2.0.5"
   },
   "keywords": [
     "ocr",
