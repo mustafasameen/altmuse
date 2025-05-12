@@ -2,9 +2,6 @@
   "name": "mocha-simplifier",
   "version": "0.1.0",
   "description": "Web app for accessible text extraction and simplification from images and PDFs, focused on cognitive accessibility.",
-  "main": "./build/index.js",
-  "module": "./build/index.mjs",
-  "types": "./build/index.d.ts",
   "files": [
     "build"
   ],
@@ -20,6 +17,9 @@
     "release": "release-it",
     "prepare": "husky"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
