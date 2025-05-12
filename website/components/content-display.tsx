@@ -1,5 +1,5 @@
 import {cn} from '@/lib/utils';
-import type {ImageResult, PageResult} from 'ocr-llm';
+import type {ImageResult, PageResult} from 'mocha-simplifier';
 import Markdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';

@@ -7,9 +7,9 @@ import {ContentDisplay} from '@/components/content-display';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
 import {Loader2, XIcon} from 'lucide-react';
-import type {ImageResult, PageResult} from 'ocr-llm';
+import type {ImageResult, PageResult} from 'mocha-simplifier';
 import {toast} from 'sonner';
-import {READING_LEVELS, type ReadingLevel} from 'ocr-llm';
+import {READING_LEVELS, type ReadingLevel} from 'mocha-simplifier';
 import {
   Select,
   SelectContent,
