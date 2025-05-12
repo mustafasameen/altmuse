@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "update-package-version": "node scripts/update-package-version.js",
-    "prebuild": "pnpm --filter mocha-simplifier... build"
+    "prebuild": "cd .. && pnpm --filter mocha-simplifier build && cd website"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.2.4",
