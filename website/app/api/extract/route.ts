@@ -1,8 +1,8 @@
 import {NextRequest, NextResponse} from 'next/server';
 
-import {ImageResult, PageResult} from 'ocr-llm';
-import {OcrLLM} from 'ocr-llm/server';
-import {READING_LEVEL_PROMPTS} from 'ocr-llm';
+import {ImageResult, PageResult} from 'mocha-simplifier';
+import {OcrLLM} from 'mocha-simplifier/server';
+import {READING_LEVEL_PROMPTS} from 'mocha-simplifier';
 
 const ocrllm = new OcrLLM({
   provider: 'openai',
