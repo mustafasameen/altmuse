@@ -96,6 +96,9 @@ importers:
       pdf-to-images-browser:
         specifier: ^0.1.4
         version: 0.1.8
+      pluralize:
+        specifier: ^8.0.0
+        version: 8.0.0
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -127,6 +130,9 @@ importers:
       '@types/node':
         specifier: ^20
         version: 20.17.12
+      '@types/pluralize':
+        specifier: ^0.0.33
+        version: 0.0.33
       '@types/react':
         specifier: ^18
         version: 18.3.21

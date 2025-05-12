@@ -6,7 +6,7 @@
     "build"
   ],
   "scripts": {
-    "build": "pnpm --filter mocha-simplifier... build && pnpm --filter mocha-simplifier-website... build",
+    "build": "pnpm tsup && pnpm -C website build",
     "dev": "tsup --watch",
     "dev:website": "pnpm -C website dev",
     "test": "vitest",
