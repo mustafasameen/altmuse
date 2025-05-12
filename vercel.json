@@ -1,8 +1,4 @@
 {
-  "builds": [
-    { "src": "package.json",           "use": "@vercel/monorepo-build" },
-    { "src": "website/package.json",   "use": "@vercel/next" }
-  ],
   "buildCommand": "pnpm build",
   "outputDirectory": "website/.next",
   "installCommand": "pnpm install",
