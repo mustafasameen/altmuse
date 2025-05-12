@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd website && pnpm build",
+  "outputDirectory": "website/.next",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "rootDirectory": "website"
+} 
