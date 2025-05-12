@@ -25,6 +25,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@release-it/conventional-changelog": "^8.0.2",
+    "@types/pluralize": "^0.0.33",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "eslint": "^8.57.0",
     "husky": "^9.1.6",
@@ -56,7 +57,8 @@
   "author": "Mustafa Sameen <mustafasameen@ufl.edu> (https://mustafasameen.github.i)",
   "dependencies": {
     "pdf-lib": "^1.17.1",
-    "pdf2pic": "^3.1.3"
+    "pdf2pic": "^3.1.3",
+    "pluralize": "^8.0.0"
   },
   "exports": {
     ".": "./build/index.js",
