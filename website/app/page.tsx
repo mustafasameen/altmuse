@@ -9,6 +9,7 @@ import {cn} from '@/lib/utils';
 import {Loader2, XIcon} from 'lucide-react';
 import type {ImageResult, PageResult} from 'mocha-simplifier';
 import {toast} from 'sonner';
+import Navigation from '@/components/ui/navigation';
 import {READING_LEVELS, type ReadingLevel} from 'mocha-simplifier';
 import {
   Select,
@@ -80,28 +81,32 @@ export default function Home() {
         className={cn(
           'space-y-10 flex-grow px-4 w-full py-8 sm:px-8 md:px-12 lg:px-20 flex items-center justify-center flex-col h-screen transition-all duration-500',
           {
-            'w-1/2': showContent,
+        'w-1/2': showContent,
           },
         )}>
+        {/* Navigation Bar */}
+        <Navigation />
+
+        {/* File Upload Section */}
         <div className="space-y-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter">
-            MochaSimplifier
+        MochaSimplifier
           </h1>
           <p className="text-lg sm:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
-            Transform complex text into clear, accessible content. Upload any image or PDF and get simplified text that's easier to understand for everyone.
+        Transform complex text into clear, accessible content. Upload any image or PDF and get simplified text that's easier to understand for everyone.
           </p>
           <div className="flex items-center justify-center gap-2">
-            <span className="text-sm text-neutral-600">Reading Level:</span>
-            <Select value={readingLevel} onValueChange={(value: ReadingLevel) => setReadingLevel(value)}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select reading level" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value={READING_LEVELS.EASY}>Easy (Grade 1-3)</SelectItem>
-                <SelectItem value={READING_LEVELS.MEDIUM}>Medium (Grade 4-6)</SelectItem>
-                <SelectItem value={READING_LEVELS.HARD}>Original</SelectItem>
-              </SelectContent>
-            </Select>
+        <span className="text-sm text-neutral-600">Reading Level:</span>
+        <Select value={readingLevel} onValueChange={(value: ReadingLevel) => setReadingLevel(value)}>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Select reading level" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value={READING_LEVELS.EASY}>Easy (Grade 1-3)</SelectItem>
+            <SelectItem value={READING_LEVELS.MEDIUM}>Medium (Grade 4-6)</SelectItem>
+            <SelectItem value={READING_LEVELS.HARD}>Original</SelectItem>
+          </SelectContent>
+        </Select>
           </div>
         </div>
         <FileUpload onUpload={handleUpload} />
@@ -125,6 +130,6 @@ export default function Home() {
         )}
         {isLoading ? <Loader /> : <ContentDisplay contents={contents} />}
       </div>
-    </div>
+    </div> 
   );
 }
