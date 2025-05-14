@@ -8,8 +8,8 @@ const Navigation = () => {
           <a href="/" className="text-xl font-bold text-neutral-800 m-8">
             Home
           </a>
-          <a href="/about" className="text-xl font-bold text-neutral-800 m-8">
-            About
+          <a href="/design-process" className="text-xl font-bold text-neutral-800 m-8">
+            Design Process
           </a>
         </div>
       </div>

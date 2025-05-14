@@ -3,7 +3,7 @@
 import {cn} from '@/lib/utils';
 import Navigation from '@/components/ui/navigation';
 
-export default function About() {
+export default function DesignProcess() {
 
   const h1 = "text-4xl sm:text-5xl lg:text-5xl font-bold"
   const paragraph = "text-lg sm:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto"
@@ -19,14 +19,14 @@ export default function About() {
         <div className="space-y-6">
             <h1 className={h1}>Project Overview</h1>
             <p className={paragraph + " italic"}>
-                A tool to create simple language descriptions for museum art.
+          A tool to create simple language descriptions for museum art.
             </p>
             <p className={paragraph}>
-                Museums often provide descriptions of their artworks and exhibits that 
-                aim to educate visitors about the background or significance of a piece.
-                 However, lengthy or dense descriptions may create challenges for 
-                 casual visitors or those with cognitive impairments. Our project, 
-                 MochaSimplifier, aims to create a tool that generates simplified 
+          Museums often provide descriptions of their artworks and exhibits that 
+          aim to educate visitors about the background or significance of a piece.
+           However, lengthy or dense descriptions may create challenges for 
+           casual visitors or those with cognitive impairments. Our project, 
+           MochaSimplifier, aims to
                  language descriptions for museum art in order to alleviate such 
                  challenges and make museum content more accessible to all audiences. 
                  MochaSimplifier is a web-based platform that allows users to upload an 
@@ -110,6 +110,41 @@ export default function About() {
             <img className="w-full max-w-2xl mx-auto" src="/images/affinity-1.png" alt="Affinity Diagram for Content Transformation, Visual Design, and Multimedia and alternative modalities." />
             <img className="w-full max-w-2xl mx-auto" src="/images/affinity-2.png" alt="Affinity Diagram for independence, scaffolding, and interactions." />
             <h1 className={h1}>Sketching and Storyboarding</h1>
+            <p className={paragraph}>
+            Based on our affinity diagram, each member of our team drafted an initial sketch of core features in our application.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+              <figure>
+              <img className="w-full max-w-full mx-auto" src="/images/grace-sketch.jpg" alt="Grace's initial sketch." />
+              <figcaption className="text-center text-sm text-neutral-500 mt-2">Grace's initial sketch</figcaption>
+              </figure>
+              <figure>
+              <img className="w-full max-w-full mx-auto" src="/images/izzy-sketch.jpg" alt="Izzy's initial sketch." />
+              <figcaption className="text-center text-sm text-neutral-500 mt-2">Izzy's initial sketch</figcaption>
+              </figure>
+              <figure>
+              <img className="w-full max-w-full mx-auto" src="/images/mustafa-sketch.jpg" alt="Mustafa's initial sketch." />
+              <figcaption className="text-center text-sm text-neutral-500 mt-2">Mustafa's initial sketch</figcaption>
+              </figure>
+              <figure>
+              <img className="w-full max-w-full mx-auto" src="/images/nick-sketch.jpg" alt="Nick's initial sketch." />
+              <figcaption className="text-center text-sm text-neutral-500 mt-2">Nick's initial sketch</figcaption>
+              </figure>
+            </div>
+            <p className={paragraph}>
+              Based on our sketches, we created a final storyboard for our prototype:
+            </p>
+            <div className="max-w-2xl">
+              <figure>
+                <img className="w-full max-w-full mx-auto" src="/images/final-storyboard.jpg" alt="Storyboard for MochaSimplifier." />
+                <figcaption className="text-center text-sm text-neutral-500 mt-2">Storyboard for MochaSimplifier</figcaption>
+              </figure>
+            </div>
+            <h1 className={h1}>Prototyping</h1>
+            <p className={paragraph}>
+              We created a prototype of our application located on the homepage of this website. Users can input an image, customize the reading level, and view a simplified summary of the text in the uploaded  image.
+            </p>
+            {/* <h1 className={h1}>Team</h1> */}
         </div>
       </div>
     </div> 
