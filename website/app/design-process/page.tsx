@@ -17,7 +17,9 @@ export default function DesignProcess() {
         <Navigation />
 
         <div className="space-y-6">
-            <h1 className={h1}>Project Overview</h1>
+            <div className="mt-6 pt-4">
+              <h1 className={h1}>Project Overview</h1>
+            </div>
             <p className={paragraph + " italic"}>
           A tool to create simple language descriptions for museum art.
             </p>

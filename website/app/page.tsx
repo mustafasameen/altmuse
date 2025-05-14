@@ -76,60 +76,60 @@ export default function Home() {
   const showContent = isLoading || contents.length > 0;
 
   return (
-    <div className="w-full min-h-screen bg-neutral-50 flex overflow-hidden">
+    <div className="w-full min-h-screen bg-neutral-50 flex overflow-hidden flex-col sm:flex-row">
       <div
-        className={cn(
-          'space-y-10 flex-grow px-4 w-full py-8 sm:px-8 md:px-12 lg:px-20 flex items-center justify-center flex-col h-screen transition-all duration-500',
-          {
-        'w-1/2': showContent,
-          },
-        )}>
-        {/* Navigation Bar */}
-        <Navigation />
+      className={cn(
+        'space-y-10 flex-grow px-4 w-full py-8 sm:px-8 md:px-12 lg:px-20 flex items-center justify-center flex-col transition-all duration-500',
+        {
+        'h-1/4 sm:h-auto sm:w-1/2': showContent,
+        },
+      )}>
+      {/* Navigation Bar */}
+      <Navigation />
 
-        {/* File Upload Section */}
-        <div className="space-y-6 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter">
+      {/* File Upload Section */}
+      <div className="space-y-6 text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter">
         MochaSimplifier
-          </h1>
-          <p className="text-lg sm:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+        </h1>
+        <p className="text-lg sm:text-xl text-neutral-500 leading-relaxed max-w-2xl mx-auto">
         Transform complex text into clear, accessible content. Upload any image or PDF and get simplified text that's easier to understand for everyone.
-          </p>
-          <div className="flex items-center justify-center gap-2">
+        </p>
+        <div className="flex items-center justify-center gap-2">
         <span className="text-base sm:text-lg text-neutral-600">Reading Level:</span>
         <Select value={readingLevel} onValueChange={(value: ReadingLevel) => setReadingLevel(value)}>
-            <SelectTrigger className="w-[300px] sm:w-[360px] text-lg sm:text-lg">
-            <SelectValue placeholder="Select reading level" />
-            </SelectTrigger>
+          <SelectTrigger className="w-[300px] sm:w-[360px] text-lg sm:text-xl">
+          <SelectValue placeholder="Select reading level" />
+          </SelectTrigger>
           <SelectContent>
-            <SelectItem value={READING_LEVELS.EASY}>Easy (Grade 1-3)</SelectItem>
-            <SelectItem value={READING_LEVELS.MEDIUM}>Medium (Grade 4-6)</SelectItem>
-            <SelectItem value={READING_LEVELS.HARD}>Original</SelectItem>
+          <SelectItem value={READING_LEVELS.EASY}>Easy (Grade 1-3)</SelectItem>
+          <SelectItem value={READING_LEVELS.MEDIUM}>Medium (Grade 4-6)</SelectItem>
+          <SelectItem value={READING_LEVELS.HARD}>Original</SelectItem>
           </SelectContent>
         </Select>
-          </div>
         </div>
-        <FileUpload onUpload={handleUpload} />
+      </div>
+      <FileUpload onUpload={handleUpload} />
       </div>
       <div
-        className={cn(
-          'flex w-0 transition-all duration-500 h-screen justify-center border-l border-neutral-300 bg-background relative',
-          {
-            'w-1/2': showContent,
-          },
-        )}>
-        {showContent && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleClose}
-            className="absolute top-4 right-4 rounded-full"
-            aria-label="Close content panel">
-            <XIcon className="!size-6" />
-          </Button>
-        )}
-        {isLoading ? <Loader /> : <ContentDisplay contents={contents} />}
+      className={cn(
+        'flex w-full sm:w-0 transition-all duration-500 justify-center border-t sm:border-t-0 sm:border-l border-neutral-300 bg-background relative',
+        {
+        'h-3/4 sm:h-auto sm:w-1/2': showContent,
+        },
+      )}>
+      {showContent && (
+        <Button
+        variant="ghost"
+        size="icon"
+        onClick={handleClose}
+        className="absolute top-4 right-4 rounded-full"
+        aria-label="Close content panel">
+        <XIcon className="!size-6" />
+        </Button>
+      )}
+      {isLoading ? <Loader /> : <ContentDisplay contents={contents} />}
       </div>
-    </div> 
+    </div>
   );
 }
