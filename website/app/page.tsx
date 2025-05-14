@@ -96,11 +96,11 @@ export default function Home() {
         Transform complex text into clear, accessible content. Upload any image or PDF and get simplified text that's easier to understand for everyone.
           </p>
           <div className="flex items-center justify-center gap-2">
-        <span className="text-sm text-neutral-600">Reading Level:</span>
+        <span className="text-base sm:text-lg text-neutral-600">Reading Level:</span>
         <Select value={readingLevel} onValueChange={(value: ReadingLevel) => setReadingLevel(value)}>
-          <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[300px] sm:w-[360px] text-lg sm:text-lg">
             <SelectValue placeholder="Select reading level" />
-          </SelectTrigger>
+            </SelectTrigger>
           <SelectContent>
             <SelectItem value={READING_LEVELS.EASY}>Easy (Grade 1-3)</SelectItem>
             <SelectItem value={READING_LEVELS.MEDIUM}>Medium (Grade 4-6)</SelectItem>

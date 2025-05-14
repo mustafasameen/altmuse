@@ -2,7 +2,7 @@
 
 import {ChangeEvent, FormEvent, useRef, useState} from 'react';
 
-import {Loader2, UploadIcon} from 'lucide-react';
+import {Loader2, UploadIcon, CameraIcon} from 'lucide-react';
 import pdfToImages from 'pdf-to-images-browser';
 import {toast} from 'sonner';
 
@@ -76,19 +76,19 @@ const FileUpload = ({onUpload}: FileUploadProps) => {
     <form
       onSubmit={handleUrlSubmit}
       className="flex flex-col w-full items-center gap-4 mt-10">
-      <div className="flex w-full max-w-lg gap-2">
-        <Input
+      {/* <div className="flex w-full max-w-lg gap-2"> */}
+        {/* <Input
           placeholder="Enter image or PDF URL"
           value={url}
           onChange={e => setUrl(e.target.value)}
-        />
-        <Button type="submit" disabled={!url || isConverting}>
+        /> */}
+        {/* <Button type="submit" disabled={!url || isConverting}>
           {isConverting && <Loader2 className="size-4 animate-spin" />}
           {isConverting ? 'Rendering' : 'Submit'}
-        </Button>
-      </div>
+        </Button> */}
+      {/* </div> */}
       <div className="flex items-center gap-4">
-        <div className="text-neutral-500">or</div>
+        {/* <div className="text-neutral-500">or</div> */}
         <Input
           type="file"
           accept="image/*,.pdf"
@@ -99,15 +99,16 @@ const FileUpload = ({onUpload}: FileUploadProps) => {
         <Button
           type="button"
           variant="outline"
-          className="gap-2"
+          size="lg" // Changed size to "xl" for a larger button
+          className="gap-2 py-4 px-6 text-lg" // Added padding and larger text size
           disabled={isConverting}
           onClick={() => fileInputRef.current?.click()}>
           {isConverting ? (
-            <Loader2 className="size-4 animate-spin" />
+            <Loader2 className="size-6 animate-spin" /> // Increased icon size
           ) : (
-            <UploadIcon className="size-4" />
+            <CameraIcon className="size-6" /> // Increased icon size
           )}
-          {isConverting ? 'Rendering' : 'Upload File'}
+          {isConverting ? 'Rendering' : 'Take/Upload Photo'}
         </Button>
       </div>
     </form>
